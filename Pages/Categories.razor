@@ -1,0 +1,60 @@
+﻿@using Test1.Data
+@page "/categories"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject CategoryService Service;
+
+
+<PageTitle>Categories</PageTitle>
+
+<h1>Categories</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Service.GetCategories())
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+                <td><button class="btn btn-danger" @onclick="() => Service.DeleteCategory(category.Id)">Delete</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Add New Category</h3>
+<form @onsubmit="AddCategory">
+    <div class="form-group w-150">
+        <label for="categoryName">Name:</label>
+        <input type="text" class="form-control" id="categoryName" @bind="newCategoryName" />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Add Category</button>
+</form>
+
+
+
+
+    @code {
+
+
+        int newCategoryId;
+        string newCategoryName;
+
+        void AddCategory()
+        {
+            Service.AddCategory(new Category { Id = newCategoryId, Name = newCategoryName });
+            newCategoryId = 0;
+            newCategoryName = string.Empty;
+        }
+
+
+    }
+

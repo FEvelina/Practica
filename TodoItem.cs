@@ -1,0 +1,10 @@
+﻿using System;
+namespace Test1
+{
+    public class TodoItem
+    {
+        public string? Title { get; set; }
+        public bool IsDone { get; set; } = false;
+    }
+}
+
