@@ -5,41 +5,41 @@ using Test1.Data.Models;
 
 namespace Test1.Services
 {
-	public class ExpenseService
+	public class IncomeService
 	{
         private readonly ExpenseTrackerContext _context;
-        public ExpenseService(ExpenseTrackerContext context)
+        public IncomeService(ExpenseTrackerContext context)
         {
             _context = context;
         }
-        public List<Expense> GetExpense()
+        public List<Income> GetIncome()
         {
 
-            return _context.Expenses.Include(expense => expense.Category).ToList();
+            return _context.Incomes.ToList();
         }
 
 
-        public Expense AddExpense(Expense expense)
+        public Income AddIncome(Income income)
         {
-            _context.Expenses.Add(expense);
+            _context.Incomes.Add(income);
             _context.SaveChanges();
 
-            return expense;
+            return income;
         }
 
 
         //To Update the records of a particluar user
-        public Expense UpdateExpense(Expense expense)
+        public Income UpdateIncome(Income income)
         {
-            expense.Date = expense.Date.ToUniversalTime();
-            _context.Entry(expense).State = EntityState.Modified;
+            income.Date = income.Date.ToUniversalTime();
+            _context.Entry(income).State = EntityState.Modified;
             _context.SaveChanges();
 
-            return expense;
+            return income;
         }
 
         //Get the details of a particular user
-        public Expense GetExpenseData(int id)
+        public Income GetIncomeData(int id)
         {
             try
             {

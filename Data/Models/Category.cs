@@ -5,7 +5,7 @@ namespace Test1.Data.Models
 	{
 		public int Id { get; set; }
         public string? Name { get; set; }
-		//public ICollection<Expense> Expenses { get; } = new List<Expense>();
+		public ICollection<Expense> Expenses { get; } = new List<Expense>();
 
 	}
 

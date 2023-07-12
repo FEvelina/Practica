@@ -20,12 +20,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/flavia/projects/Test1/Test1/Pages/AddExpense.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkRXhwZW5zZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/flavia/projects/Test1/Test1/Pages/Categories.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/flavia/projects/Test1/Test1/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/EditExpense.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdEV4cGVuc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/ExpenseForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXhwZW5zZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/Expenses.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXhwZW5zZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/ExpensesCategory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXhwZW5zZXNDYXRlZ29yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/flavia/projects/Test1/Test1/Pages/FetchData.razor]

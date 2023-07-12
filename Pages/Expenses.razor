@@ -1,0 +1,56 @@
+﻿@using Test1.Data
+@page "/expenses"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject ExpenseService Service;
+
+
+<PageTitle>Expenses</PageTitle>
+
+<h1>Expenses</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Planed</th>
+            <th>Category</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var expense in Service.GetExpense())
+        {
+            <tr>
+                <td>@expense.Id</td>
+                <td>@expense.Title</td>
+                <td>@expense.Date</td>
+                <td>@expense.Amount</td>
+                <td>@expense.Planed</td>
+                <td>@expense.Category.Name</td>
+                <td><button class="btn btn-danger" @onclick="() => Service.DeleteExpense(expense.Id)">Delete</button> <a class="btn btn-info" href="expenses/@expense.Id">Edit</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="expenses/new" class="btn btn-success">New Expense</a>
+
+
+
+
+
+@code {
+
+
+
+
+
+}
+

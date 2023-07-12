@@ -1,0 +1,50 @@
+﻿@using Test1.Data
+@page "/expenses/{expenseId}"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject NavigationManager NavigationManager
+@inject CategoryService CService
+@inject ExpenseService Service;
+
+
+<PageTitle>EditExpense</PageTitle>
+
+<h1>Edit Expense</h1>
+
+<form @onsubmit="EdExpense">
+    <ExpenseForm expense="expense"></ExpenseForm>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+@code {
+
+    [Parameter]
+    public String expenseId { get; set; }
+
+    private Expense expense = new Expense()
+    {
+        Date = DateTime.UtcNow
+    };
+
+
+    protected override void OnInitialized()
+    {
+        expense = Service.GetExpenseData(Int32.Parse(expenseId));
+
+    }
+
+
+
+
+    public void EdExpense()
+    {
+
+        Service.UpdateExpense(expense);
+        NavigationManager.NavigateTo("/expenses");
+    }
+
+
+}
+

@@ -16,6 +16,8 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<ExpenseService>();
+
 
 
 //Configure the database context and creation

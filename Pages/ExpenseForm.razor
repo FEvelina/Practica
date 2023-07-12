@@ -1,0 +1,43 @@
+﻿@using Test1.Services
+@using Test1.Data.Models;
+@inject NavigationManager NavigationManager
+@inject CategoryService CService
+@inject ExpenseService Service;
+
+<div class="form-group w-150">
+    <label for="expenseTitle">Title:</label>
+    <input type="text" class="" id="expenseTitle" @bind="expense.Title" />
+</div>
+<div class="form-group w-150">
+    <label for="expenseDate">Date:</label>
+    <input type="date" class="" id="expenseDate" @bind="expense.Date" />
+</div>
+
+<div class="form-group w-150">
+    <label for="expenseAmount">Amount:</label>
+    <input type="text" class="" id="expenseAmount" @bind="expense.Amount" />
+</div>
+<div class="form-group w-150">
+    <label for="expensePlaned">Planed:</label>
+    <input type="checkbox" class="" id="expensePlaned" @bind="expense.Planed" />
+</div>
+<label for="expenseCategory">Category:</label>
+<select @bind="expense.CategoryId" id="expenseCategory">
+
+    @foreach (var category in CService.GetCategories())
+    {
+        <option value="@category.Id">@category.Name</option>
+
+    }
+</select>
+<br>
+
+
+
+@code {
+        [Parameter]
+        public Data.Models.Expense expense { set; get; }
+
+
+}
+
