@@ -43,10 +43,10 @@ namespace Test1.Services
         {
             try
             {
-                Expense? expense = _context.Expenses.Find(id);
-                if (expense != null)
+                Income? income = _context.Incomes.Find(id);
+                if (income != null)
                 {
-                    return expense;
+                    return income;
                 }
                 else
                 {
@@ -63,14 +63,14 @@ namespace Test1.Services
 
 
 
-        public void DeleteExpense(int id)
+        public void DeleteIncome(int id)
         {
             try
             {
-                Expense? expense = _context.Expenses.Find(id);
-                if (expense != null)
+                Income? income = _context.Incomes.Find(id);
+                if (income != null)
                 {
-                    _context.Expenses.Remove(expense);
+                    _context.Incomes.Remove(income);
                     _context.SaveChanges();
                 }
                 else

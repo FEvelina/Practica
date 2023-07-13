@@ -1,0 +1,49 @@
+﻿@using Test1.Data
+@page "/incomes/{incomesId}"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject NavigationManager NavigationManager
+@inject IncomeService IService;
+
+
+<PageTitle>Edit Income</PageTitle>
+
+<h1>Edit Income</h1>
+
+<form @onsubmit="EdIncome">
+    <IncomeForm income="income"></IncomeForm>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+@code {
+
+    [Parameter]
+    public String incomesId { get; set; }
+
+    private Income income = new Income()
+    {
+        Date = DateTime.UtcNow
+    };
+
+
+    protected override void OnInitialized()
+    {
+        income = IService.GetIncomeData(Int32.Parse(incomesId));
+
+    }
+
+
+
+
+    public void EdIncome()
+    {
+
+        IService.UpdateIncome(income);
+        NavigationManager.NavigateTo("/incomes");
+    }
+
+
+}
+

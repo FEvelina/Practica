@@ -1,0 +1,39 @@
+﻿@using Test1.Services
+@using Test1.Data.Models;
+@inject NavigationManager NavigationManager
+@inject CategoryService CService
+@inject IncomeService Service;
+
+<div class="form-group w-150">
+    <label for="expenseTitle">Title:</label>
+    <input type="text" class="" id="expenseTitle" @bind="income.Title" />
+</div>
+<div class="form-group w-150">
+    <label for="expenseDate">Date:</label>
+    <input type="date" class="" id="expenseDate" @bind="income.Date" />
+</div>
+
+<div class="form-group w-150">
+    <label for="expenseAmount">Amount:</label>
+    <input type="text" class="" id="expenseAmount" @bind="income.Amount" />
+</div>
+<select class="form-select" aria-label="Default select example" @onchange="(e)=>income.Type=(Data.Models.Type)Enum.Parse(typeof(Data.Models.Type), e.Value.ToString())">
+    <option selected>Open this select menu</option>
+    @foreach (string colorEnum in Enum.GetNames(typeof(Data.Models.Type)))
+    {
+        <option value="@colorEnum">@colorEnum</option>
+    }
+</select>
+<br>
+
+
+
+@code {
+    [Parameter]
+    public Data.Models.Income income { set; get; }
+
+
+}
+
+
+

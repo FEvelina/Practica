@@ -1,0 +1,39 @@
+﻿@using Test1.Data
+@page "/incomes/new"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject NavigationManager NavigationManager
+@inject IncomeService IService;
+
+
+<PageTitle>Add Income</PageTitle>
+
+<h1>Add Income</h1>
+
+<form @onsubmit="InsertIncome">
+    <IncomeForm income="income"></IncomeForm>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+@code {
+
+
+    private Income income = new Income()
+    {
+        Date = DateTime.UtcNow
+    };
+
+
+
+    void InsertIncome()
+    {
+        IService.AddIncome(income);
+        NavigationManager.NavigateTo("/incomes");
+
+    }
+
+
+}
+

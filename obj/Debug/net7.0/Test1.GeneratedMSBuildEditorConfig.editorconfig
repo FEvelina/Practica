@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkRXhwZW5zZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/flavia/projects/Test1/Test1/Pages/AddIncome.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkSW5jb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/flavia/projects/Test1/Test1/Pages/Categories.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/flavia/projects/Test1/Test1/Pages/EditExpense.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdEV4cGVuc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/EditIncomes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdEluY29tZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/flavia/projects/Test1/Test1/Pages/ExpenseForm.razor]
@@ -50,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/flavia/projects/Test1/Test1/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/IncomeForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5jb21lRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/flavia/projects/Test1/Test1/Pages/Incomes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5jb21lcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/flavia/projects/Test1/Test1/Pages/Index.razor]

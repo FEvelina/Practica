@@ -1,0 +1,53 @@
+﻿@using Test1.Data
+@page "/incomes"
+
+@using Test1.Services
+@using Test1.Data.Models;
+@inject IncomeService Service;
+
+
+<PageTitle>Incomes</PageTitle>
+
+<h1>Incomes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var income in Service.GetIncome())
+        {
+            <tr>
+                <td>@income.Id</td>
+                <td>@income.Title</td>
+                <td>@income.Date</td>
+                <td>@income.Amount</td>
+                <td>@income.Type</td>
+                <td><button class="btn btn-danger" @onclick="() => Service.DeleteIncome(income.Id)">Delete</button> <a class="btn btn-info" href="incomes/@income.Id">Edit</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="incomes/new" class="btn btn-success">New Income</a>
+
+
+
+@code {
+
+
+
+
+
+}
+
+
